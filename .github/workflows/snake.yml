@@ -1,0 +1,43 @@
+# ═══════════════════════════════════════════════════════════════
+#  Contribution Snake — Cyberpunk Neon Edition 🐍
+#  Location in your profile repo:
+#  .github/workflows/snake.yml
+#
+#  It draws a snake that "eats" your contribution squares and
+#  publishes the SVG to the `output` branch of this repo.
+#  The profile README already points to that branch.
+# ═══════════════════════════════════════════════════════════════
+
+name: Generate Contribution Snake
+
+on:
+  schedule:
+    - cron: "0 0 * * *"   # every day at 00:00 UTC
+  workflow_dispatch:        # allow manual run from the Actions tab
+  push:
+    branches: [main]        # regenerate whenever the profile updates
+
+permissions:
+  contents: write
+
+jobs:
+  generate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+
+    steps:
+      - name: Generate snake SVGs (neon palette)
+        uses: Platane/snk/svg-only@v3
+        with:
+          github_user_name: ${{ github.repository_owner }}
+          outputs: |
+            dist/github-contribution-grid-snake.svg?color_snake=%2300b8d9&color_dots=%23ebedf0%2C%239be9a8%2C%2340c463%2C%2300b8d9%2C%2300f5ff
+            dist/github-contribution-grid-snake-dark.svg?color_snake=%2300f5ff&color_dots=%23161b22%2C%23013543%2C%23006c7a%2C%2300b8d9%2C%2300f5ff
+
+      - name: Deploy SVGs to output branch
+        uses: crazy-max/ghaction-github-pages@v4
+        with:
+          target_branch: output
+          build_dir: dist
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
