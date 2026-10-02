@@ -1,5 +1,5 @@
 # ═══════════════════════════════════════════════════════════════
-#  Contribution Snake — Cyberpunk Neon Edition 🐍
+#  Contribution Snake — Deep-Space Neon Edition 🐍
 #  Location in your profile repo:
 #  .github/workflows/snake.yml
 #
@@ -26,13 +26,13 @@ jobs:
     timeout-minutes: 10
 
     steps:
-      - name: Generate snake SVGs (neon palette)
+      - name: Generate snake SVGs (deep-space neon palette)
         uses: Platane/snk/svg-only@v3
         with:
           github_user_name: ${{ github.repository_owner }}
           outputs: |
-            dist/github-contribution-grid-snake.svg?color_snake=%2300b8d9&color_dots=%23ebedf0%2C%239be9a8%2C%2340c463%2C%2300b8d9%2C%2300f5ff
-            dist/github-contribution-grid-snake-dark.svg?color_snake=%2300f5ff&color_dots=%23161b22%2C%23013543%2C%23006c7a%2C%2300b8d9%2C%2300f5ff
+            dist/github-contribution-grid-snake.svg?color_snake=%237c3aed&color_dots=%23e0e7ff%2C%23a5b4fc%2C%23818cf8%2C%234f46e5%2C%237c3aed
+            dist/github-contribution-grid-snake-dark.svg?color_snake=%23a78bfa&color_dots=%230b0e24%2C%23263a9e%2C%233b5bdb%2C%235a74f5%2C%23a5c8ff
 
       - name: Deploy SVGs to output branch
         uses: crazy-max/ghaction-github-pages@v4
