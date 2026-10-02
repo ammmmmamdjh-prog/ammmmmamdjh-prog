@@ -36,23 +36,11 @@ operator:
 
 <div align="center">
 
-![Python](https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white)
-![C++](https://img.shields.io/badge/C++-00599C?style=flat-square&logo=cplusplus&logoColor=white)
-![C](https://img.shields.io/badge/C-A8B9CC?style=flat-square&logo=c&logoColor=black)
-![Bash](https://img.shields.io/badge/Bash-4EAA25?style=flat-square&logo=gnubash&logoColor=white)
-![Arduino](https://img.shields.io/badge/Arduino-00979D?style=flat-square&logo=arduino&logoColor=white)
-![Git](https://img.shields.io/badge/Git-F05032?style=flat-square&logo=git&logoColor=white)
-![OpenCV](https://img.shields.io/badge/OpenCV-5C3EE8?style=flat-square&logo=opencv&logoColor=white)
-![Linux](https://img.shields.io/badge/Linux-FCC624?style=flat-square&logo=linux&logoColor=black)
-![VS Code](https://img.shields.io/badge/VSCode-007ACC?style=flat-square&logo=visualstudiocode&logoColor=white)
+<img src="assets/tech-arsenal.svg" width="570" alt="tech stack cards — Python, Bash, C++, C, Arduino, Git, GitHub, OpenCV, Linux, VS Code, Markdown"/>
 
-<a href="https://skillicons.dev">
-  <img src="https://skillicons.dev/icons?i=python,bash,cpp,c,arduino,git,github,opencv,linux,vscode,md&theme=dark" alt="tech stack"/>
-</a>
+<!-- Card grid custom-built for this profile (icon + label stacked, Deep-Space Neon palette) · icon artwork: skillicons.dev -->
 
 </div>
-
----
 
 ## 🤖 Featured Builds
 
